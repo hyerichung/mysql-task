@@ -3,12 +3,13 @@ const createError = require("http-errors");
 const express = require("express");
 const cors = require("cors");
 
-module.exports = function ({ app, routerLoader }) {
+module.exports = function ({ app, routerLoader, sequelizeLoader }) {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(cors());
 
+  sequelizeLoader();
   routerLoader({ app });
 
   app.use(function (req, res, next) {
