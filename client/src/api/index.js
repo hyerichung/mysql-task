@@ -1,4 +1,4 @@
-export async function getAllAlbums() {
+export async function getAllAlbumsAPI() {
   const response = await fetch(`${process.env.REACT_APP_SERVER_PORT}/api/albums`, {
     method: "GET",
     headers: {

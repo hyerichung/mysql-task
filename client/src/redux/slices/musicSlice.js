@@ -1,12 +1,12 @@
 import { createAsyncThunk,createSlice } from "@reduxjs/toolkit";
 
-import { getAlbumsAPI } from "../../api";
+import { getAllAlbumsAPI } from "../../api";
 
 export const getAllAlbums = createAsyncThunk(
   "ALBUMS/GET_ALL_ALBUMS",
   async (_, { rejectWithValue }) => {
     try {
-      const { albums, tracks } = await getAlbumsAPI();
+      const { albums, tracks } = await getAllAlbumsAPI();
 
       console.log(albums, "Data", albums);
 
@@ -30,8 +30,8 @@ const initialState = {
   loading: false
 };
 
-export const albumSlice = createSlice({
-  name: "album",
+export const musicSlice = createSlice({
+  name: "music",
   initialState,
   reducers: {},
   extraReducers: {

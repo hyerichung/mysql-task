@@ -4,18 +4,18 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 
-import { albumSlice } from "./slices/albumSlice";
+import { musicSlice } from "./slices/musicSlice";
 
 const reducer = {
-  albums: albumSlice.reducer
+  music: musicSlice.reducer
 };
 
 const middlewares = [thunk, logger];
-const middlewareEnhancer = composeWithDevTools(applyMiddleware(...middlewares));
+const composedEnhancers = composeWithDevTools(applyMiddleware(...middlewares));
 
 const store = configureStore({
   reducer,
-  middleware: middlewareEnhancer
+  composedEnhancers
 });
 
 export { store };
