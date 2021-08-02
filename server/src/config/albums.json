@@ -1,0 +1,80 @@
+{
+  "albums": [
+    {
+      "title": "The Masters of the Roll",
+      "artist": "Calude Achille Debussy",
+      "released_by": "Bule Pie Records",
+      "release_date": "2015-07-15",
+      "cover_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ClaudeDebussy/ClaudeDebussy.png",
+      "tracks": [
+        {
+          "title": "Delphic Dances - Preludes BK 1 No. 1",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ClaudeDebussy/Delphic+Dances+-+Preludes+BK+1+No.+1.mp3"
+        },
+        {
+          "title": "Submerged Cathedral - Preludes BK 1 No. 10",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ClaudeDebussy/Submerged+Cathedral+-+Preludes+BK+1+No.+10.mp3"
+        },
+        {
+          "title": "Dance Of Puck - Preludes BK 1 No. 11",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ClaudeDebussy/Dance+Of+Puck+-+Preludes+BK+1+No.+11.mp3"
+        }
+      ]
+    },
+    {
+      "title": "Interstellar (soundtrack)",
+      "artist": "Hans Zimmer",
+      "released_by": "WaterTower Music",
+      "release_date": "2014-11-17",
+      "cover_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/HansZimmer/HansZimmer.png",
+      "tracks": [
+        {
+          "title": "Cornfield Chase",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/HansZimmer/Cornfield+Chase.mp3"
+        },
+        {
+          "title": "Dreaming Of The Crash",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/HansZimmer/Dreaming+Of+The+Crash.mp3"
+        }
+      ]
+    },
+    {
+      "title": "The Evolution Of An Artist - Chet Baker",
+      "artist": "Chet Baker",
+      "released_by": "ZYX Music",
+      "release_date": "2008-07-04",
+      "cover_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ChetBaker/ChetBaker.png",
+      "tracks": [
+        {
+          "title": "I’ve Never Been In Love Before",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ChetBaker/I've+Never+Been+In+Love+Before.mp3"
+        },
+        {
+          "title": "Moonlight In Vermont",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ChetBaker/Moonlight+In+Vermont.mp3"
+        },
+        {
+          "title": "Moonlight In Vermont",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/ChetBaker/Moonlight+In+Vermont.mp3"
+        }
+      ]
+    },
+    {
+      "title": "6 Feet Beneath the Moon",
+      "artist": "King Krule",
+      "released_by": "True Panther Sounds",
+      "release_date": "2013-08-24",
+      "cover_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/KingKrule/KingKrule.png",
+      "tracks": [
+        {
+          "title": "Border Line",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/KingKrule/Border+Line.mp3"
+        },
+        {
+          "title": "Neptune Estate",
+          "track_url": "https://mysqltask.s3.ap-northeast-2.amazonaws.com/KingKrule/Neptune+Estate.mp3"
+        }
+      ]
+    }
+  ]
+}
