@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Header from "../components/shared/Header";
+
 const Wrpper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -28,6 +30,7 @@ export default function AlbumsPage({
   return (
     <>
       <Wrpper>
+        <Header isHome="true" />
         <h1>hi</h1>
       </Wrpper>
     </>
