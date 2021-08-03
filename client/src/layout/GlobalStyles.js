@@ -1,10 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
+import { GLOBAL_COLOR } from "../constants";
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 
     @media screen and (min-width: 992px) {
       width: 100vw;
@@ -13,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #5b36ac;
+      background-color: ${GLOBAL_COLOR.LAPTOP_BACKGROUND_COLOR};
     }
   }
 `;

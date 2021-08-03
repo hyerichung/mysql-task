@@ -16,6 +16,7 @@ const TrackInfoWrapper = styled.div`
 `;
 
 const TrackTitleText = styled.div`
+  width: 85%;
   padding: 0.1em 0.6em;
   font-size: 1em;
   color: ${({ theme }) => theme.colors.white};

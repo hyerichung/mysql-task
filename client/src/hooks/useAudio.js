@@ -9,12 +9,25 @@ export default function useAudio() {
 
   const audioRef = useRef();
   const isReady = useRef(false);
+  const intervalRef = useRef();
+
+  const checkMusicPlayingWithInterval = () => {
+	  clearInterval(intervalRef.current);
+
+	  intervalRef.current = setInterval(() => {
+	    if (audioRef.current.ended) {
+	      dispatch(setIsPlaying());
+	    }
+	  }, [1000]);
+  };
 
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
+      checkMusicPlayingWithInterval();
     } else {
       if (audioRef.current) {
+        clearInterval(intervalRef.current);
         audioRef.current.pause();
       }
     }
@@ -23,6 +36,7 @@ export default function useAudio() {
   useEffect(() => {
     return () => {
       audioRef.current.pause();
+      clearInterval(intervalRef.current);
     };
   }, []);
 

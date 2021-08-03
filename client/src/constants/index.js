@@ -3,4 +3,8 @@ const HEADER_TITLE = {
   ALBUM_DETAILS: "Album Details"
 };
 
-export { HEADER_TITLE };
+const GLOBAL_COLOR = {
+  LAPTOP_BACKGROUND_COLOR: "#5b36ac"
+};
+
+export { GLOBAL_COLOR, HEADER_TITLE };
