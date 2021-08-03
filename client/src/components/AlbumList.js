@@ -14,13 +14,11 @@ const Main = styled.main`
   padding: 2em 1em;
   top: 60px;
   bottom: 60px;
-  background-color: blue;
 `;
 
 const MainWrapper = styled.div`
   height: calc(100% - 60px);
   overflow: scroll;
-  background-color: orange;
 `;
 
 function AlbumList({ albums, onAlbumClick }) {

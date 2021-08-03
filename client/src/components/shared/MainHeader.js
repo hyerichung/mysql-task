@@ -8,7 +8,7 @@ const Header = styled.header`
   padding: 0.3rem;
   position: absolute;
   z-index: 1;
-  background-color: #5b36ac;
+  background-color: ${({ theme }) => theme.colors.main};
   color: #fff;
 `;
 
@@ -34,6 +34,7 @@ const HeaderTitle = styled.span`
 
 const HeaderBackButton = styled.div`
   cursor: pointer;
+  font-size: 23px;
 `;
 
 function MainHeader({ title, backIcon, onBackIconClick }) {
@@ -41,7 +42,7 @@ function MainHeader({ title, backIcon, onBackIconClick }) {
     <Header>
       <HeaderContents>
         <HeaderBackButton>
-          <FontAwesomeIcon size="2x" icon={backIcon} onClick={onBackIconClick} />
+          <FontAwesomeIcon icon={backIcon} onClick={onBackIconClick} />
         </HeaderBackButton>
         <HeaderTitle>{title}</HeaderTitle>
       </HeaderContents>

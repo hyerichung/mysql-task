@@ -18,9 +18,7 @@ export default function AlbumsContainer() {
     history.push(`/albums/${albumId}`);
   }
 
-  function handleBackIconClick() {
-    console.log("clicked");
-  }
+  function handleBackIconClick() {}
 
   return (
     <AlbumsPage

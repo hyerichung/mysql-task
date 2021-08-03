@@ -8,7 +8,6 @@ const TrackListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: green;
 `;
 
 function TrackList({ artist, tracks, coverUrl, onTrackClick }) {

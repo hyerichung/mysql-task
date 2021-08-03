@@ -7,21 +7,22 @@ const AlbumDescWrapper = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
+  padding-top: 1em;
   align-items: center;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.main};;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const AlbumDescTextWrapper = styled.ul`
   padding: 0;
   text-align: center;
-  background-color: green;
 `;
 
 const AlbumDescText = styled.div`
   text-decoration: none;
   padding: 0;
   font-size: ${props => props.size};
-  margin: 0.2em 0.5em 0.2em 1em;
+  margin: 0.3em 0.2em;
 `;
 
 const AlbumImg = styled.img``;
@@ -33,8 +34,8 @@ function AlbumDesc({ album }) {
       <AlbumDescTextWrapper>
         <AlbumDescText size="1.2em">{album.title}</AlbumDescText>
         <AlbumDescText size="1em">{album.artist}</AlbumDescText>
-        <AlbumDescText size="0.7em">released by: {album.released_by}</AlbumDescText>
-        <AlbumDescText size="0.7em">release date {changeDateFormat(album.release_date)}</AlbumDescText>
+        <AlbumDescText size="0.6em">released by: {album.released_by}</AlbumDescText>
+        <AlbumDescText size="0.6em">release date: {changeDateFormat(album.release_date)}</AlbumDescText>
       </AlbumDescTextWrapper>
     </AlbumDescWrapper>
   );

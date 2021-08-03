@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 
     @media screen and (min-width: 992px) {
       width: 100vw;
@@ -13,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
       justify-content: center;
       align-items: center;
       background-color: #5b36ac;
-      font-family: "Gothic A1", "Ubuntu", sans-serif;
     }
   }
 `;

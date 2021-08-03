@@ -1,9 +1,9 @@
-import { faPause,faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faMusic, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 
-import trimPlayerTrackTitle from "../utils/trimPlayerTrackTitle";
+import trimTitle from "../utils/trimTitle";
 
 const PlayerWrapper = styled.div`
   width: 100%;
@@ -11,23 +11,23 @@ const PlayerWrapper = styled.div`
   position: absolute;
   bottom: 0;
   z-index: 1;
-  background-color: green;
 
   ${({ theme }) => theme.laptop`
     width: 414px;
     bottom: calc((100% - 800px) / 2);
   `}
+
+  background-color: ${({ theme }) => theme.colors.search};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const PlayerContents = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: yellow;
 `;
 
 const CurrentTrackInfo = styled.div`
-  background-color: skyblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,20 +37,16 @@ const CurrentTrackInfo = styled.div`
 `;
 
 const CurrentTrackTitleText = styled.div`
-  background-color: pink;
   width: 100%;
-  margin-bottom: 0.3em;
-  font-size: 17px;
+  font-size: 15px;
 `;
 
 const CurrentTrackArtistText = styled.div`
-   background-color: green;
    width: 100%;
-   font-size: 15px;
+   font-size: 12px;
 `;
 
 const PlayControlButton = styled.div`
-  background-color: palegoldenrod;
   width: 13%;
   height: 100%;
   font-size: 1.5em;
@@ -59,23 +55,27 @@ const PlayControlButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `;
 
 const Abc = styled.div`
   height: 100%;
   width: 15%;
-  background-color: green;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 function Player({ title, artist, coverUrl, isPlaying, onControlButtonClick }) {
   return (
     <PlayerWrapper>
       <PlayerContents>
-        { coverUrl ? <img src={coverUrl} alt="album_cover" height="100%" /> : <Abc /> }
+        { coverUrl ? <img src={coverUrl} alt="album_cover" height="100%" /> : <Abc><FontAwesomeIcon icon={faMusic} /></Abc>}
         <CurrentTrackInfo>
           <CurrentTrackTitleText>
             {title.length
-              ? trimPlayerTrackTitle(title)
+              ? trimTitle(title, 26)
               : "Welcome, Choose track..."
             }
           </CurrentTrackTitleText>

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import trimTitle from "../utils/trimTitle";
+
 const AlbumWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,7 +10,6 @@ const AlbumWrapper = styled.div`
   flex-basis: 170px;
   flex-grow: 0;
   min-height: 200px;
-  background-color: green;
   cursor: pointer;
 `;
 
@@ -35,8 +36,8 @@ const AlbumTitle = styled.div`
 
 const AlbumArtist = styled.div`
   font-size: 13px;
-  color: grey;
-  padding-left: 0.7em;
+  color: ${({ theme }) => theme.colors.grey};;
+  padding-left: 0.5em;
 `;
 
 function Album({ album, onAlbumClick }) {
@@ -50,7 +51,7 @@ function Album({ album, onAlbumClick }) {
       <AlbumDescWrapper>
         <AlbumTitleWrapper>
           <AlbumTitle>
-            {album.title.length > 22 ? album.title.substr(0, 20) + "..." : album.title}
+            {trimTitle(album.title, 22)}
           </AlbumTitle>
         </AlbumTitleWrapper>
         <AlbumArtist>{album.artist}</AlbumArtist>

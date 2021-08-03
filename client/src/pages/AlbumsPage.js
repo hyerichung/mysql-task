@@ -14,7 +14,8 @@ const AlbumPageWrpper = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: yellow;
+  background-color: ${({ theme }) => theme.colors.main};
+  color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.laptop`
     width: 414px;
