@@ -4,10 +4,12 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 
-import { musicSlice } from "./slices/musicSlice";
+import { currentMusicSlice } from "./slices/currentMusicSlice";
+import { musicInfoSlice } from "./slices/musicInfoSlice";
 
 const reducer = {
-  music: musicSlice.reducer
+  musicInfo: musicInfoSlice.reducer,
+  currentMusic: currentMusicSlice.reducer
 };
 
 const middlewares = [thunk, logger];

@@ -36,8 +36,8 @@ const initialState = {
   loading: false
 };
 
-export const musicSlice = createSlice({
-  name: "music",
+export const musicInfoSlice = createSlice({
+  name: "musicInfo",
   initialState,
   reducers: {},
   extraReducers: {

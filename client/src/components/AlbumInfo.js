@@ -33,7 +33,12 @@ function AlbumInfo({ album, tracks, onTrackClick }) {
     <MainWrapper>
       <Main>
         <AlbumDesc album={album}/>
-        <TrackList tracks={tracks} artist={album.artist} coverUrl={album.cover_url} onTrackClick={onTrackClick} />
+        <TrackList
+          tracks={tracks}
+          artist={album.artist}
+          coverUrl={album.cover_url}
+          onTrackClick={onTrackClick}
+        />
       </Main>
     </MainWrapper>
   );

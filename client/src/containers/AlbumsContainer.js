@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import AlbumsPage from "../pages/AlbumsPage";
-import { getAllAlbums } from "../redux/slices/musicSlice";
+import { getAllAlbums } from "../redux/slices/musicInfoSlice";
 
 export default function AlbumsContainer() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const { albums } = useSelector((state) => state.music);
+  const { albums } = useSelector((state) => state.musicInfo);
 
   useEffect(() => {
     dispatch(getAllAlbums());

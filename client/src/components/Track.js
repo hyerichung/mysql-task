@@ -33,7 +33,7 @@ function Track({ artist, track, coverUrl, onTrackClick }) {
         <TrackInfoText size="1em">{track.title}</TrackInfoText>
         <TrackInfoText size="0.7em">{artist}</TrackInfoText>
       </TrackInfoWrapper>
-      <TrackPlayButton onClick={() => onTrackClick(track.id)}>
+      <TrackPlayButton onClick={() => onTrackClick(track.id, artist, coverUrl)}>
         <FontAwesomeIcon icon={faPlay} />
       </TrackPlayButton>
     </TrackWrapper>

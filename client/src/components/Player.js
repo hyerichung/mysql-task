@@ -1,6 +1,6 @@
-import { faBars,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
@@ -19,11 +19,9 @@ const PlayerWrapper = styled.div`
 `;
 
 function Player() {
-  const history = useHistory();
 
   return (
     <PlayerWrapper>
-      <div>hi</div>
     </PlayerWrapper>
   );
 }
