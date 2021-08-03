@@ -8,16 +8,23 @@ const TrackWrapper = styled.div`
   align-items: center;
   width: 100%;
   margin-bottom: 0.5em;
-  color: ${({ theme }) => theme.colors.white};;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const TrackInfoWrapper = styled.div`
   width: 78%;
 `;
 
-const TrackInfoText = styled.div`
-  padding: 0.2em ${props => props.space};
-  font-size: ${props => props.size};
+const TrackTitleText = styled.div`
+  padding: 0.1em 0.6em;
+  font-size: 1em;
+  color: ${({ theme }) => theme.colors.white};
+`;
+
+const TrackArtistText = styled.div`
+  font-size: 0.7em;
+  padding: 0 1em;
+  color: ${({ theme }) => theme.colors.grey};
 `;
 
 const TrackPlayButton = styled.div`
@@ -31,8 +38,8 @@ function Track({ artist, track, coverUrl, onTrackClick }) {
     <TrackWrapper>
       <AlbumImg src={coverUrl} width="13%" />
       <TrackInfoWrapper>
-        <TrackInfoText size="1em" space="0.6em">{track.title}</TrackInfoText>
-        <TrackInfoText size="0.7em" space="1em">{artist}</TrackInfoText>
+        <TrackTitleText>{track.title}</TrackTitleText>
+        <TrackArtistText>{artist}</TrackArtistText>
       </TrackInfoWrapper>
       <TrackPlayButton onClick={() => onTrackClick(track.id, artist, coverUrl)}>
         <FontAwesomeIcon icon={faPlay} />
