@@ -5,7 +5,7 @@ import styled from "styled-components";
 import AlbumList from "../components/AlbumList";
 import MainHeader from "../components/shared/MainHeader";
 
-const AlbumPageWrpper = styled.div`
+const AlbumsPageWrpper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -32,10 +32,14 @@ export default function AlbumsPage({
 }) {
   return (
     <>
-      <AlbumPageWrpper>
-        <MainHeader title="Home" backIcon={faBars} onBackIconClick={onBackIconClick} />
+      <AlbumsPageWrpper>
+        <MainHeader
+          title="Home"
+          backIcon={faBars}
+          onBackIconClick={onBackIconClick}
+        />
         <AlbumList albums={albums} onAlbumClick={onAlbumClick} />
-      </AlbumPageWrpper>
+      </AlbumsPageWrpper>
     </>
   );
 }
