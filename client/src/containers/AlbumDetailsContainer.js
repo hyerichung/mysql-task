@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 
-import useAudio from "../hooks/useAudio";
 import AlbumDetailsPage from "../pages/AlbumDetailsPage";
-import { setCurrentMusic, setIsPlaying } from "../redux/slices/currentMusicSlice";
+import { setCurrentMusic } from "../redux/slices/currentMusicSlice";
 
 export default function AlbumDetailContainer() {
   const history = useHistory();
@@ -18,8 +17,6 @@ export default function AlbumDetailContainer() {
   }
 
   function handleTrackClick(trackId, artist, coverUrl) {
-    console.log("track click", tracks.byTrackId[trackId], artist, coverUrl);
-
     dispatch(setCurrentMusic({ track: tracks.byTrackId[trackId], artist, coverUrl }));
   }
 

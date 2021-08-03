@@ -5,7 +5,7 @@ const AlbumWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 180px;
+  flex-basis: 170px;
   flex-grow: 0;
   min-height: 200px;
   background-color: green;
@@ -50,7 +50,7 @@ function Album({ album, onAlbumClick }) {
       <AlbumDescWrapper>
         <AlbumTitleWrapper>
           <AlbumTitle>
-            {album.title.length > 23 ? album.title.substr(0, 20) + "..." :album.title}
+            {album.title.length > 22 ? album.title.substr(0, 20) + "..." : album.title}
           </AlbumTitle>
         </AlbumTitleWrapper>
         <AlbumArtist>{album.artist}</AlbumArtist>

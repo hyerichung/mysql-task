@@ -15,8 +15,6 @@ const AlbumDetailPageWrpper = styled.div`
   padding: 0;
   overflow: hidden;
   background-color: yellow;
-  /* --vh: 10.15px; */
-  /* height: calc(var(--vh, 1vh) * 60); */
 
   ${({ theme }) => theme.laptop`
     width: 414px;
@@ -35,7 +33,11 @@ export default function AlbumDetailPage({
   return (
     <>
       <AlbumDetailPageWrpper>
-        <MainHeader title="Album Details" backIcon={faChevronLeft} onBackIconClick={onBackIconClick} />
+        <MainHeader
+          title="Album Details"
+          backIcon={faChevronLeft}
+          onBackIconClick={onBackIconClick}
+        />
         <AlbumInfo
           album={album}
           tracks={tracks}

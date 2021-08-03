@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setIsPlaying } from "../redux/slices/currentMusicSlice";
@@ -21,7 +21,6 @@ export default function useAudio() {
   }, [isPlaying]);
 
   useEffect(() => {
-
     return () => {
       audioRef.current.pause();
     };
@@ -40,7 +39,7 @@ export default function useAudio() {
     } else {
       isReady.current = true;
     }
-  }, [trackUrl]);
+  }, [dispatch, trackUrl]);
 
   return;
 }

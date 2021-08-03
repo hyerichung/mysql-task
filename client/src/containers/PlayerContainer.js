@@ -1,17 +1,19 @@
-import React, { useEffect, useRef,useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import React from "react";
+import { useSelector } from "react-redux";
 
 import Player from "../components/Player";
 import useAudio from "../hooks/useAudio";
 
 export default function PlayerContainer() {
-  const { title, artist, trackUrl, coverUrl, isPlaying } = useSelector(state => state.currentMusic);
+  const { title, artist, coverUrl, isPlaying } = useSelector(state => state.currentMusic);
   useAudio();
 
   return (
     <Player
-
+      title={title}
+      artist={artist}
+      coverUrl={coverUrl}
+      isPlaying={isPlaying}
     />
   );
 }

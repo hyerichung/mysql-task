@@ -1,5 +1,4 @@
-import { faBars,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import styled from "styled-components";
 
@@ -16,8 +15,6 @@ const AlbumPageWrpper = styled.div`
   padding: 0;
   overflow: hidden;
   background-color: yellow;
-  /* --vh: 10.15px; */
-  /* height: calc(var(--vh, 1vh) * 60); */
 
   ${({ theme }) => theme.laptop`
     width: 414px;

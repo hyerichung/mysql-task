@@ -15,7 +15,7 @@ export const currentMusicSlice = createSlice({
   reducers: {
     setCurrentMusic: (state, { payload }) => {
       state.id = payload.track.id;
-      state.tite = payload.track.title;
+      state.title = payload.track.title;
       state.trackUrl = payload.track.track_url;
       state.artist = payload.artist;
       state.coverUrl = payload.coverUrl;

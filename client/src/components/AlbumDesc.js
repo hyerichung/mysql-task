@@ -13,9 +13,6 @@ const AlbumDescWrapper = styled.div`
 
 const AlbumDescTextWrapper = styled.ul`
   padding: 0;
-  /* min-width: 150px; */
-  /* width: 50%;
-  height: 60%; */
   text-align: center;
   background-color: green;
 `;

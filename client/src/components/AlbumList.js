@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import Album from "./Album";
@@ -25,8 +24,6 @@ const MainWrapper = styled.div`
 `;
 
 function AlbumList({ albums, onAlbumClick }) {
-  const history = useHistory();
-
   return (
     <MainWrapper>
       <Main>

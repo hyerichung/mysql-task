@@ -6,6 +6,7 @@ import styled from "styled-components";
 const TrackWrapper = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
   margin-bottom: 0.5em;
   background-color: skyblue;
 `;

@@ -1,8 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-import Album from "./Album";
 import AlbumDesc from "./AlbumDesc";
 import TrackList from "./TrackList";
 
@@ -14,7 +12,7 @@ const Main = styled.main`
   gap: 1em;
   position: relative;
   margin-bottom: 1em;
-  padding: 2em 1em;
+  padding: 2em 0.8em;
   top: 60px;
   bottom: 60px;
   background-color: blue;
@@ -27,8 +25,6 @@ const MainWrapper = styled.div`
 `;
 
 function AlbumInfo({ album, tracks, onTrackClick }) {
-  const history = useHistory();
-
   return (
     <MainWrapper>
       <Main>
