@@ -1,5 +1,5 @@
-const trimPlayerTrackTitle = (title, maxLength) => {
+const trimTitle = (title, maxLength) => {
   return title.length > maxLength ? title.substr(0, maxLength - 3) + "..." : title;
 };
 
-export default trimPlayerTrackTitle;
+export default trimTitle;

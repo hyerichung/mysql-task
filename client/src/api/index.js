@@ -8,7 +8,6 @@ export async function getAllAlbumsAPI() {
   });
 
   const { data } = await response.json();
-  console.log(data," aaaa");
 
   return data;
 }

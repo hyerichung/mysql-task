@@ -1,16 +1,16 @@
 import { Redirect, Route, Switch } from "react-router-dom";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 import AlbumDetailContainer from "../containers/AlbumDetailsContainer";
 import AlbumsContainer from "../containers/AlbumsContainer";
 import PlayerContainer from "../containers/PlayerContainer";
-import media from "../layout/media";
+import mediaRules from "../layout/mediaRules";
 import theme from "../layout/theme";
 
 function App() {
   return (
     <div>
-      <ThemeProvider theme={{ ...theme, ...media }}>
+      <ThemeProvider theme={{ ...theme, ...mediaRules }}>
         <Switch>
           <Route path="/albums" exact>
             <AlbumsContainer />

@@ -28,8 +28,8 @@ const HeaderTitle = styled.span`
   left: 50%;
   font-size: 1.1rem;
   font-weight: 700;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  /* -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 `;
 
 const HeaderBackButton = styled.div`
