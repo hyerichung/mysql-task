@@ -1,29 +1,27 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
+import useAllAlbums from "../hooks/useAllAlbums";
 import AlbumsPage from "../pages/AlbumsPage";
-import { getAllAlbums } from "../redux/slices/musicInfoSlice";
 
 export default function AlbumsContainer() {
   const history = useHistory();
-  const dispatch = useDispatch();
   const { albums } = useSelector((state) => state.musicInfo);
-
-  useEffect(() => {
-    dispatch(getAllAlbums());
-  }, []);
+  useAllAlbums();
 
   function handleAlbumClick(albumId) {
     history.push(`/albums/${albumId}`);
   }
 
-  function handleBackIconClick() {}
+  function handleHeaderLeftIconClick() {
+    // for sidebar menu
+  }
 
   return (
     <AlbumsPage
       onAlbumClick={handleAlbumClick}
-      onBackIconClick={handleBackIconClick}
+      onHeaderLeftIconClick={handleHeaderLeftIconClick}
       albums={albums}
     />
   );

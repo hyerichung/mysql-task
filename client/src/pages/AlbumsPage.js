@@ -8,7 +8,7 @@ import PageDefaultWrapper from "../layout/PageDefaultWrapper";
 
 export default function AlbumsPage({
   onAlbumClick,
-  onBackIconClick,
+  onHeaderLeftIconClick,
   albums
 }) {
   return (
@@ -17,10 +17,10 @@ export default function AlbumsPage({
         <MainHeader
           title={HEADER_TITLE.HOME}
           backIcon={faBars}
-          onBackIconClick={onBackIconClick}
+          onHeaderLeftIconClick={onHeaderLeftIconClick}
         />
         <AlbumList albums={albums} onAlbumClick={onAlbumClick} />
       </PageDefaultWrapper>
     </>
   );
-}
+};

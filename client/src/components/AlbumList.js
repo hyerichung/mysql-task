@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 import Album from "./Album";
 
-const Main = styled.main`
+const AlbumListMainWrapper = styled.div`
+  height: calc(100% - 60px);
+  overflow: scroll;
+`;
+
+const MainList = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,15 +21,10 @@ const Main = styled.main`
   bottom: 60px;
 `;
 
-const MainWrapper = styled.div`
-  height: calc(100% - 60px);
-  overflow: scroll;
-`;
-
 function AlbumList({ albums, onAlbumClick }) {
   return (
-    <MainWrapper>
-      <Main>
+    <AlbumListMainWrapper>
+      <MainList>
         {
           albums.map(album =>
             <Album
@@ -34,8 +34,8 @@ function AlbumList({ albums, onAlbumClick }) {
             />
           )
         }
-      </Main>
-    </MainWrapper>
+      </MainList>
+    </AlbumListMainWrapper>
   );
 }
 

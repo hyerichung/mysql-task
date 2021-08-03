@@ -5,15 +5,14 @@ import styled from "styled-components";
 const Header = styled.header`
   width: 100%;
   height: 60px;
-  padding: 0.3rem;
   position: absolute;
   z-index: 1;
+  color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.main};
-  color: #fff;
 `;
 
 const HeaderContents = styled.div`
-  width: 95%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -21,30 +20,35 @@ const HeaderContents = styled.div`
   position: relative;
 `;
 
-const HeaderTitle = styled.span`
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+const HeaderTitle = styled.div`
   font-size: 1.1rem;
   font-weight: 700;
-  /* -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const HeaderBackButton = styled.div`
-  cursor: pointer;
+  width: 3rem;
   font-size: 23px;
+  cursor: pointer;
 `;
 
-function MainHeader({ title, backIcon, onBackIconClick }) {
+const HeaderTitleWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 3rem;
+`;
+
+function MainHeader({ title, backIcon, onHeaderLeftIconClick }) {
   return (
     <Header>
       <HeaderContents>
         <HeaderBackButton>
-          <FontAwesomeIcon icon={backIcon} onClick={onBackIconClick} />
+          <FontAwesomeIcon icon={backIcon} onClick={onHeaderLeftIconClick} />
         </HeaderBackButton>
-        <HeaderTitle>{title}</HeaderTitle>
+        <HeaderTitleWrapper>
+          <HeaderTitle>{title}</HeaderTitle>
+        </HeaderTitleWrapper>
       </HeaderContents>
     </Header>
   );

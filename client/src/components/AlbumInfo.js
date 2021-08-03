@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import AlbumDesc from "./AlbumDesc";
+import AlbumDesc from "./AlbumBottomDesc";
 import TrackList from "./TrackList";
 
-const Main = styled.main`
+const AlbumInfoMainWrapper = styled.div`
+  height: calc(100% - 60px);
+  overflow: scroll;
+`;
+
+const AlbumInfoMain = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,15 +22,10 @@ const Main = styled.main`
   bottom: 60px;
 `;
 
-const MainWrapper = styled.div`
-  height: calc(100% - 60px);
-  overflow: scroll;
-`;
-
 function AlbumInfo({ album, tracks, onTrackClick }) {
   return (
-    <MainWrapper>
-      <Main>
+    <AlbumInfoMainWrapper>
+      <AlbumInfoMain>
         <AlbumDesc album={album}/>
         <TrackList
           tracks={tracks}
@@ -33,8 +33,8 @@ function AlbumInfo({ album, tracks, onTrackClick }) {
           coverUrl={album.cover_url}
           onTrackClick={onTrackClick}
         />
-      </Main>
-    </MainWrapper>
+      </AlbumInfoMain>
+    </AlbumInfoMainWrapper>
   );
 }
 

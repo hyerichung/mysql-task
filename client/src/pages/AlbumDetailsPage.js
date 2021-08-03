@@ -9,7 +9,7 @@ import PageDefaultWrapper from "../layout/PageDefaultWrapper";
 export default function AlbumDetailPage({
   album,
   tracks,
-  onBackIconClick,
+  onHeaderLeftIconClick,
   onTrackClick
 }) {
   return (
@@ -18,7 +18,7 @@ export default function AlbumDetailPage({
         <MainHeader
           title={HEADER_TITLE.ALBUM_DETAILS}
           backIcon={faChevronLeft}
-          onBackIconClick={onBackIconClick}
+          onHeaderLeftIconClick={onHeaderLeftIconClick}
         />
         <AlbumInfo
           album={album}
@@ -28,4 +28,4 @@ export default function AlbumDetailPage({
       </PageDefaultWrapper>
     </>
   );
-}
+};

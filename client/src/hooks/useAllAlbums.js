@@ -3,12 +3,12 @@ import { useDispatch } from "react-redux";
 
 import { getAllAlbums } from "../redux/slices/musicInfoSlice";
 
-export default function useAlbums() {
+export default function useAllAlbums() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAllAlbums());
   }, [dispatch]);
 
-  return {};
-}
+  return;
+};

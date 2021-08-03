@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import changeDateFormat from "../utils/changeDateFormat";
 
-const AlbumDescWrapper = styled.div`
+const AlbumBottomDescWrapper = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -25,20 +25,26 @@ const AlbumDescText = styled.div`
   margin: 0.3em 0.2em;
 `;
 
-const AlbumImg = styled.img``;
+const AlbumImg = styled.img`
+  width: 50%;
+`;
 
-function AlbumDesc({ album }) {
+function AlbumBottomDesc({ album }) {
   return (
-    <AlbumDescWrapper>
-      <AlbumImg src={album.cover_url} width="50%" />
+    <AlbumBottomDescWrapper>
+      <AlbumImg src={album.cover_url} />
       <AlbumDescTextWrapper>
         <AlbumDescText size="1.2em">{album.title}</AlbumDescText>
         <AlbumDescText size="1em">{album.artist}</AlbumDescText>
-        <AlbumDescText size="0.6em">released by: {album.released_by}</AlbumDescText>
-        <AlbumDescText size="0.6em">release date: {changeDateFormat(album.release_date)}</AlbumDescText>
+        <AlbumDescText size="0.6em">
+          released by: {album.released_by}
+        </AlbumDescText>
+        <AlbumDescText size="0.6em">
+          release date: {changeDateFormat(album.release_date)}
+        </AlbumDescText>
       </AlbumDescTextWrapper>
-    </AlbumDescWrapper>
+    </AlbumBottomDescWrapper>
   );
 }
 
-export default AlbumDesc;
+export default AlbumBottomDesc;

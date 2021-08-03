@@ -9,7 +9,7 @@ import theme from "../layout/theme";
 
 function App() {
   return (
-    <div>
+    <>
       <ThemeProvider theme={{ ...theme, ...mediaRules }}>
         <Switch>
           <Route path="/albums" exact>
@@ -22,7 +22,7 @@ function App() {
         </Switch>
         <PlayerContainer />
       </ThemeProvider>
-    </div>
+    </>
   );
 }
 

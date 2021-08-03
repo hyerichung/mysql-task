@@ -12,7 +12,7 @@ export default function AlbumDetailContainer() {
   const { albumId } = useParams();
   const { albums, tracks } = useSelector((state) => state.musicInfo);
 
-  function handleBackIconClick() {
+  function handleHeaderLeftIconClick() {
     history.goBack();
   }
 
@@ -24,7 +24,7 @@ export default function AlbumDetailContainer() {
     <AlbumDetailsPage
       album={albums[albumId-1]}
       tracks={tracks.byAlbumId[albumId]}
-      onBackIconClick={handleBackIconClick}
+      onHeaderLeftIconClick={handleHeaderLeftIconClick}
       onTrackClick={handleTrackClick}
     />
   );
