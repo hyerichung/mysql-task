@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -12,13 +12,13 @@ export default function AlbumDetailContainer() {
   const { albumId } = useParams();
   const { albums, tracks } = useSelector((state) => state.musicInfo);
 
-  function handleHeaderLeftIconClick() {
+  const handleHeaderLeftIconClick = useCallback(() => {
     history.goBack();
-  }
+  }, [history]);
 
-  function handleTrackClick(trackId, artist, coverUrl) {
+  const handleTrackClick = useCallback((trackId, artist, coverUrl) => {
     dispatch(setCurrentMusic({ track: tracks.byTrackId[trackId], artist, coverUrl }));
-  }
+  }, [dispatch, tracks.byTrackId]);
 
   return (
     <AlbumDetailsPage

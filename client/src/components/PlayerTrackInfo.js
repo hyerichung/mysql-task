@@ -42,4 +42,4 @@ function PlayerTrackInfo({ title, artist }) {
   );
 }
 
-export default PlayerTrackInfo;
+export default React.memo(PlayerTrackInfo);

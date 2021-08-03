@@ -38,4 +38,4 @@ function AlbumInfo({ album, tracks, onTrackClick }) {
   );
 }
 
-export default AlbumInfo;
+export default React.memo(AlbumInfo);

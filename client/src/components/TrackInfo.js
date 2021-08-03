@@ -28,4 +28,4 @@ function TrackInfo({ title, artist }) {
   );
 }
 
-export default TrackInfo;
+export default React.memo(TrackInfo);

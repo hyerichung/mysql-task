@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Player from "../components/Player";
@@ -10,9 +10,9 @@ export default function PlayerContainer() {
   const { title, artist, coverUrl, isPlaying } = useSelector(state => state.currentMusic);
   useAudio();
 
-  function handleControlButtonClick() {
+  const handleControlButtonClick = useCallback(() => {
     dispatch(setIsPlaying(!isPlaying));
-  }
+  }, [dispatch, isPlaying]);
 
   return (
     <Player

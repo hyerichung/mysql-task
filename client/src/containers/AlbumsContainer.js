@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -10,13 +10,13 @@ export default function AlbumsContainer() {
   const { albums } = useSelector((state) => state.musicInfo);
   useAllAlbums();
 
-  function handleAlbumClick(albumId) {
+  const handleAlbumClick = useCallback((albumId) => {
     history.push(`/albums/${albumId}`);
-  }
+  }, [history]);
 
-  function handleHeaderLeftIconClick() {
+  const handleHeaderLeftIconClick = useCallback(() => {
     // for sidebar menu
-  }
+  }, []);
 
   return (
     <AlbumsPage

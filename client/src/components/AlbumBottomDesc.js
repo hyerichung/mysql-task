@@ -47,4 +47,4 @@ function AlbumBottomDesc({ album }) {
   );
 }
 
-export default AlbumBottomDesc;
+export default React.memo(AlbumBottomDesc);

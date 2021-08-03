@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setIsPlaying } from "../redux/slices/currentMusicSlice";
@@ -11,7 +11,7 @@ export default function useAudio() {
   const isReady = useRef(false);
   const intervalRef = useRef();
 
-  const checkMusicPlayingWithInterval = () => {
+  const checkMusicPlayingWithInterval = useCallback(() => {
 	  clearInterval(intervalRef.current);
 
 	  intervalRef.current = setInterval(() => {
@@ -19,7 +19,7 @@ export default function useAudio() {
 	      dispatch(setIsPlaying());
 	    }
 	  }, [1000]);
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -31,7 +31,7 @@ export default function useAudio() {
         audioRef.current.pause();
       }
     }
-  }, [isPlaying]);
+  }, [isPlaying, checkMusicPlayingWithInterval]);
 
   useEffect(() => {
     return () => {

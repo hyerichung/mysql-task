@@ -26,4 +26,4 @@ function TrackList({ artist, tracks, coverUrl, onTrackClick }) {
   );
 }
 
-export default TrackList;
+export default React.memo(TrackList);

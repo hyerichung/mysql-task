@@ -28,4 +28,4 @@ function Album({ album, onAlbumClick }) {
   );
 }
 
-export default Album;
+export default React.memo(Album);
