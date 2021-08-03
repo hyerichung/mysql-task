@@ -13,9 +13,9 @@ function App() {
         <Route path="/albums" exact>
           <AlbumsContainer />
         </Route>
-        <Route path="/albums/:albumId" >
+        {/* <Route path="/albums/:albumId" >
           <AlbumDetailContainer />
-        </Route>
+        </Route> */}
         <Redirect to="/albums" />
       </Switch>
     </ThemeProvider>

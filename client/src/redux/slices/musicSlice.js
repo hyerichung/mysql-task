@@ -8,8 +8,6 @@ export const getAllAlbums = createAsyncThunk(
     try {
       const { albums, tracks } = await getAllAlbumsAPI();
 
-      console.log(albums, "Data", albums);
-
       return { albums, tracks };
     } catch (err) {
       return rejectWithValue({ message: err.message });
@@ -18,13 +16,9 @@ export const getAllAlbums = createAsyncThunk(
 );
 
 const initialState = {
-  albums: {
-    byId: {},
-    allIds: []
-  },
+  albums: [],
   tracks: {
-    byId: {},
-    allIds: []
+    byAlbumId: {}
   },
   error: null,
   loading: false
@@ -35,10 +29,9 @@ export const musicSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [getAllAlbums.fulfilled]: (state, action) => {
-
-      console.log(state, "state?");
-
+    [getAllAlbums.fulfilled]: (state, { payload }) => {
+      state.albums = payload.albums;
+      state.tracks.byAlbumId = payload.tracks;
       state.loading = false;
       state.error = false;
     },

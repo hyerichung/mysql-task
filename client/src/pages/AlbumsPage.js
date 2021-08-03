@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import AlbumMain from "../components/AlbumMain";
 import Header from "../components/shared/Header";
 
 const Wrpper = styled.div`
@@ -25,13 +26,14 @@ const Wrpper = styled.div`
 `;
 
 export default function AlbumsPage({
-  onAlbumClick
+  onAlbumClick,
+  albums
 }) {
   return (
     <>
       <Wrpper>
         <Header isHome="true" />
-        <h1>hi</h1>
+        <AlbumMain albums={albums} />
       </Wrpper>
     </>
   );
