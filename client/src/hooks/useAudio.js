@@ -12,13 +12,13 @@ export default function useAudio() {
   const intervalRef = useRef();
 
   const checkMusicPlayingWithInterval = useCallback(() => {
-	  clearInterval(intervalRef.current);
+    clearInterval(intervalRef.current);
 
-	  intervalRef.current = setInterval(() => {
-	    if (audioRef.current.ended) {
-	      dispatch(setIsPlaying());
-	    }
-	  }, [1000]);
+    intervalRef.current = setInterval(() => {
+      if (audioRef.current.ended) {
+        dispatch(setIsPlaying());
+      }
+    }, [1000]);
   }, [dispatch]);
 
   useEffect(() => {
