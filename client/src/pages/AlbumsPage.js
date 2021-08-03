@@ -3,6 +3,7 @@ import React from "react";
 
 import AlbumList from "../components/AlbumList";
 import MainHeader from "../components/shared/MainHeader";
+import { HEADER_TITLE } from "../constants";
 import PageDefaultWrapper from "../layout/PageDefaultWrapper";
 
 export default function AlbumsPage({
@@ -14,7 +15,7 @@ export default function AlbumsPage({
     <>
       <PageDefaultWrapper>
         <MainHeader
-          title="Home"
+          title={HEADER_TITLE.HOME}
           backIcon={faBars}
           onBackIconClick={onBackIconClick}
         />
