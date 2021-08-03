@@ -32,11 +32,17 @@ const HeaderTitle = styled.span`
   transform: translate(-50%, -50%);
 `;
 
+const HeaderBackButton = styled.div`
+  cursor: pointer;
+`;
+
 function MainHeader({ title, backIcon, onBackIconClick }) {
   return (
     <Header>
       <HeaderContents>
-        <FontAwesomeIcon size="2x" icon={backIcon} onClick={onBackIconClick} />
+        <HeaderBackButton>
+          <FontAwesomeIcon size="2x" icon={backIcon} onClick={onBackIconClick} />
+        </HeaderBackButton>
         <HeaderTitle>{title}</HeaderTitle>
       </HeaderContents>
     </Header>

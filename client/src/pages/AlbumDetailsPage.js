@@ -1,8 +1,8 @@
-import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import styled from "styled-components";
 
-import AlbumMain from "../components/AlbumMain";
+import AlbumInfo from "../components/AlbumInfo";
 import MainHeader from "../components/shared/MainHeader";
 
 const AlbumDetailPageWrpper = styled.div`
@@ -27,14 +27,20 @@ const AlbumDetailPageWrpper = styled.div`
 `;
 
 export default function AlbumDetailPage({
-  albums,
-  onBackIconClick
+  album,
+  tracks,
+  onBackIconClick,
+  onTrackClick
 }) {
   return (
     <>
       <AlbumDetailPageWrpper>
         <MainHeader title="Album Details" backIcon={faChevronLeft} onBackIconClick={onBackIconClick} />
-        <div>hi</div>
+        <AlbumInfo
+          album={album}
+          tracks={tracks}
+          onTrackClick={onTrackClick}
+        />
       </AlbumDetailPageWrpper>
     </>
   );

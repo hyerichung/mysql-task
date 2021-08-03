@@ -1,9 +1,9 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 
-import AlbumDetailContainer from "../containers/AlbumDetailContainer";
+import AlbumDetailContainer from "../containers/AlbumDetailsContainer";
 import AlbumsContainer from "../containers/AlbumsContainer";
-import PlayerContainer from "../containers/PlyaerContainer";
+import PlayerContainer from "../containers/PlayerContainer";
 import media from "../layout/media";
 import theme from "../layout/theme";
 

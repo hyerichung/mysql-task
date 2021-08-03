@@ -8,7 +8,18 @@ export const getAllAlbums = createAsyncThunk(
     try {
       const { albums, tracks } = await getAllAlbumsAPI();
 
-      return { albums, tracks };
+      const tracksById = {};
+      const flattedTracks = Object.values(tracks).flat();
+
+      flattedTracks.forEach(track => {
+        if (tracksById[track.id] === undefined) {
+          tracksById[track.id] = [];
+        }
+
+        tracksById[track.id] = track;
+      });
+
+      return { albums, tracksByAlbumId: tracks, tracksById };
     } catch (err) {
       return rejectWithValue({ message: err.message });
     }
@@ -18,7 +29,8 @@ export const getAllAlbums = createAsyncThunk(
 const initialState = {
   albums: [],
   tracks: {
-    byAlbumId: {}
+    byAlbumId: {},
+    byTrackId: {}
   },
   error: null,
   loading: false
@@ -31,7 +43,8 @@ export const musicSlice = createSlice({
   extraReducers: {
     [getAllAlbums.fulfilled]: (state, { payload }) => {
       state.albums = payload.albums;
-      state.tracks.byAlbumId = payload.tracks;
+      state.tracks.byAlbumId = payload.tracksByAlbumId;
+      state.tracks.byTrackId = payload.tracksById;
       state.loading = false;
       state.error = false;
     },

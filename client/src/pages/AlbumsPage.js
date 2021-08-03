@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 
-import AlbumMain from "../components/AlbumMain";
+import AlbumList from "../components/AlbumList";
 import MainHeader from "../components/shared/MainHeader";
 
 const AlbumPageWrpper = styled.div`
@@ -36,7 +36,7 @@ export default function AlbumsPage({
     <>
       <AlbumPageWrpper>
         <MainHeader title="Home" backIcon={faBars} onBackIconClick={onBackIconClick} />
-        <AlbumMain albums={albums} onAlbumClick={onAlbumClick} />
+        <AlbumList albums={albums} onAlbumClick={onAlbumClick} />
       </AlbumPageWrpper>
     </>
   );

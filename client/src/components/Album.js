@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const AlbumWrapper = styled.div`
@@ -39,10 +38,6 @@ const AlbumArtist = styled.div`
   color: grey;
   padding-left: 0.7em;
 `;
-
-const handleClikc = () => {
-  console.log(1);
-};
 
 function Album({ album, onAlbumClick }) {
   return (
