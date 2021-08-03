@@ -63,11 +63,11 @@ const PlayControlButton = styled.div`
 
 const Abc = styled.div`
   height: 100%;
-  width: 19%;
+  width: 15%;
   background-color: green;
 `;
 
-function Player({ title, artist, coverUrl, isPlaying }) {
+function Player({ title, artist, coverUrl, isPlaying, onControlButtonClick }) {
   return (
     <PlayerWrapper>
       <PlayerContents>
@@ -86,7 +86,7 @@ function Player({ title, artist, coverUrl, isPlaying }) {
             }
           </CurrentTrackArtistText>
         </CurrentTrackInfo>
-        <PlayControlButton>
+        <PlayControlButton onClick={onControlButtonClick}>
           { title && <FontAwesomeIcon icon={isPlaying ? faPause : faPlay } /> }
         </PlayControlButton>
       </PlayerContents>
