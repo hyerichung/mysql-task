@@ -44,9 +44,9 @@ const handleClikc = () => {
   console.log(1);
 };
 
-function Album({ album }) {
+function Album({ album, onAlbumClick }) {
   return (
-    <AlbumWrapper onClick={handleClikc}>
+    <AlbumWrapper onClick={() => onAlbumClick(album.id)}>
       <img
         src={album.cover_url}
         alt="album_cover"

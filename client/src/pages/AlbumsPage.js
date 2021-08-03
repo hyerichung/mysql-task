@@ -1,8 +1,10 @@
+import { faBars,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 
 import AlbumMain from "../components/AlbumMain";
-import Header from "../components/shared/Header";
+import MainHeader from "../components/shared/MainHeader";
 
 const AlbumPageWrpper = styled.div`
   width: 100vw;
@@ -27,13 +29,14 @@ const AlbumPageWrpper = styled.div`
 
 export default function AlbumsPage({
   onAlbumClick,
+  onBackIconClick,
   albums
 }) {
   return (
     <>
       <AlbumPageWrpper>
-        <Header isHome="true" />
-        <AlbumMain albums={albums} />
+        <MainHeader title="Home" backIcon={faBars} onBackIconClick={onBackIconClick} />
+        <AlbumMain albums={albums} onAlbumClick={onAlbumClick} />
       </AlbumPageWrpper>
     </>
   );

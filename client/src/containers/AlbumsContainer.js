@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -18,9 +18,14 @@ export default function AlbumsContainer() {
     history.push(`/albums/${albumId}`);
   }
 
+  function handleBackIconClick() {
+    console.log("clicked");
+  }
+
   return (
     <AlbumsPage
       onAlbumClick={handleAlbumClick}
+      onBackIconClick={handleBackIconClick}
       albums={albums}
     />
   );

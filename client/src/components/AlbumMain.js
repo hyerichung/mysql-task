@@ -24,14 +24,14 @@ const MainWrapper = styled.div`
   background-color: orange;
 `;
 
-function AlbumMain({ isHome, albums }) {
+function AlbumMain({ albums, onAlbumClick }) {
   const history = useHistory();
 
   return (
     <MainWrapper>
       <Main>
         {
-          albums.map(album => <Album key={album.id} album={album} />)
+          albums.map(album => <Album key={album.id} album={album} onAlbumClick={onAlbumClick}/>)
         }
 
       </Main>

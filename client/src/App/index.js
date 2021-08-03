@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import AlbumDetailContainer from "../containers/AlbumDetailContainer";
 import AlbumsContainer from "../containers/AlbumsContainer";
-import PlayerContainer from "../containers/PlayerContainer";
+import PlayerContainer from "../containers/PlyaerContainer";
 import media from "../layout/media";
 import theme from "../layout/theme";
 
@@ -15,9 +15,9 @@ function App() {
           <Route path="/albums" exact>
             <AlbumsContainer />
           </Route>
-          {/* <Route path="/albums/:albumId" >
-          <AlbumDetailContainer />
-        </Route> */}
+          <Route path="/albums/:albumId" >
+            <AlbumDetailContainer />
+          </Route>
           <Redirect to="/albums" />
         </Switch>
         <PlayerContainer />

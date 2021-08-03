@@ -1,7 +1,5 @@
-import { faBars,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -34,21 +32,12 @@ const HeaderTitle = styled.span`
   transform: translate(-50%, -50%);
 `;
 
-function MainHeader({ isHome }) {
-  const history = useHistory();
-
-  function handleBackButtonClick() {
-    history.goBack();
-  }
-
+function MainHeader({ title, backIcon, onBackIconClick }) {
   return (
     <Header>
       <HeaderContents>
-        { isHome
-          ? <FontAwesomeIcon size="2x" icon={faBars} onClick={handleBackButtonClick} />
-          : <FontAwesomeIcon size="2x" icon={faChevronLeft} />
-        }
-        <HeaderTitle>{ isHome ? "Home" : "Album details" }</HeaderTitle>
+        <FontAwesomeIcon size="2x" icon={backIcon} onClick={onBackIconClick} />
+        <HeaderTitle>{title}</HeaderTitle>
       </HeaderContents>
     </Header>
   );
