@@ -15,4 +15,4 @@ function TrackPlayButton({ trackId, artist, coverUrl, onTrackClick }) {
   );
 }
 
-export default React.memo(TrackPlayButton);
+export default TrackPlayButton;

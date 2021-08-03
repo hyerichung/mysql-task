@@ -23,4 +23,4 @@ function PlayerControlButton({ title, isPlaying, onControlButtonClick }) {
   );
 }
 
-export default React.memo(PlayerControlButton);
+export default PlayerControlButton;

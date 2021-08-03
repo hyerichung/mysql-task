@@ -31,4 +31,4 @@ function Track({ artist, track, coverUrl, onTrackClick }) {
   );
 }
 
-export default React.memo(Track);
+export default Track;

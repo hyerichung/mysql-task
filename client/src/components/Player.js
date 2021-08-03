@@ -42,4 +42,4 @@ function Player({ title, artist, coverUrl, isPlaying, onControlButtonClick }) {
   );
 }
 
-export default React.memo(Player);
+export default Player;

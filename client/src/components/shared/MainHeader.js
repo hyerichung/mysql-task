@@ -54,4 +54,4 @@ function MainHeader({ title, backIcon, onHeaderLeftIconClick }) {
   );
 }
 
-export default React.memo(MainHeader);
+export default MainHeader;

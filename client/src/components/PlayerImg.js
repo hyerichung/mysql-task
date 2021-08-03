@@ -29,4 +29,4 @@ function PlayerImg({ coverUrl }) {
   );
 }
 
-export default React.memo(PlayerImg);
+export default PlayerImg;

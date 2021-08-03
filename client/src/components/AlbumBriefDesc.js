@@ -43,4 +43,4 @@ function AlbumBriefDesc({ album }) {
   );
 }
 
-export default React.memo(AlbumBriefDesc);
+export default AlbumBriefDesc;
