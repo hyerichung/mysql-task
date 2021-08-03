@@ -10,7 +10,7 @@ exports.getAllAlbums = async (req, res, next) => {
       title: album.title,
       artist: album.artist,
       cover_url: album.cover_url,
-      release_by: album.release_by,
+      released_by: album.released_by,
       release_date: album.release_date,
     }));
 
