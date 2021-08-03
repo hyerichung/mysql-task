@@ -4,37 +4,37 @@ import styled from "styled-components";
 
 import Album from "../components/Album";
 
-const MainWrapper = styled.main`
-  background-color: blue;
-  /* max-width: 100vw; */
-  /* height: calc(100% - 120px); */
-  /* height: calc(100% - 60px); */
-  /* padding: 1rem .3rem; */
-  /* padding: 2rem; */
+const Main = styled.main`
   display: flex;
-  position: relative;
-  padding: 2em 1em 2em 1em;
-  margin-bottom: 1em;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* position: absolute; */
+  gap: 1em;
+  position: relative;
+  margin-bottom: 1em;
+  padding: 2em 1em;
   top: 60px;
   bottom: 60px;
+  background-color: blue;
+`;
+
+const MainWrapper = styled.div`
+  height: calc(100% - 60px);
   overflow: scroll;
-  gap: 1em;
+  background-color: orange;
 `;
 
 function AlbumMain({ isHome, albums }) {
   const history = useHistory();
 
-
   return (
     <MainWrapper>
-      {
-        albums.map(album => <Album key={album.id} album={album} />)
-      }
+      <Main>
+        {
+          albums.map(album => <Album key={album.id} album={album} />)
+        }
 
+      </Main>
     </MainWrapper>
   );
 }

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import AlbumMain from "../components/AlbumMain";
 import Header from "../components/shared/Header";
 
-const Wrpper = styled.div`
+const AlbumPageWrpper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -31,10 +31,10 @@ export default function AlbumsPage({
 }) {
   return (
     <>
-      <Wrpper>
+      <AlbumPageWrpper>
         <Header isHome="true" />
         <AlbumMain albums={albums} />
-      </Wrpper>
+      </AlbumPageWrpper>
     </>
   );
 }
