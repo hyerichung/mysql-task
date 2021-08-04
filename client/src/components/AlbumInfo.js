@@ -5,21 +5,17 @@ import AlbumDesc from "./AlbumBottomDesc";
 import TrackList from "./TrackList";
 
 const AlbumInfoMainWrapper = styled.div`
-  height: calc(100% - 60px);
+  height: calc(100vh - 10%);
   overflow: scroll;
 `;
 
 const AlbumInfoMain = styled.main`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 1em;
+  align-items: center;
   position: relative;
-  margin-bottom: 1em;
-  padding: 2em 0.8em;
   top: 60px;
-  bottom: 60px;
+  margin: 2em 1em;
 `;
 
 function AlbumInfo({ album, tracks, onTrackClick }) {

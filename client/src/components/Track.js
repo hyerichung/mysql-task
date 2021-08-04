@@ -8,8 +8,8 @@ const TrackWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 0.5em;
   color: ${({ theme }) => theme.colors.white};
+  margin-bottom: 0.5em;
 `;
 
 const TrackImg = styled.img`

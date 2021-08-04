@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    overflow: scroll;
 
     @media screen and (min-width: 992px) {
       width: 100vw;

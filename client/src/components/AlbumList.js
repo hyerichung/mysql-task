@@ -4,12 +4,12 @@ import styled from "styled-components";
 import Album from "./Album";
 
 const AlbumListMainWrapper = styled.div`
-  top: 60px;
-  height: calc(100% - 60px);
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
 `;
 
 const MainList = styled.main`
+  height: calc(100vh - 16%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,7 @@ const MainList = styled.main`
   padding: 2em 1em;
   top: 60px;
   bottom: 60px;
+  overflow: scroll;
 `;
 
 function AlbumList({ albums, onAlbumClick }) {
