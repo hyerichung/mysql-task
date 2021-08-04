@@ -35,8 +35,7 @@ function PlayerTrackInfo({ title, artist }) {
         {title.length ? title : PLAYER_TRACK_INFO.TITLE}
       </CurrentTrackTitleText>
       <CurrentTrackArtistText>
-        {artist ? artist : PLAYER_TRACK_INFO.COPYRIGHT
-        }
+        {artist.length ? artist : PLAYER_TRACK_INFO.COPYRIGHT}
       </CurrentTrackArtistText>
     </CurrentTrackInfo>
   );

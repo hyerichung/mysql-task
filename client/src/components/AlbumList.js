@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Album from "./Album";
 
 const AlbumListMainWrapper = styled.div`
+  top: 60px;
   height: calc(100% - 60px);
   overflow: scroll;
 `;
@@ -15,7 +16,6 @@ const MainList = styled.main`
   flex-wrap: wrap;
   gap: 1em;
   position: relative;
-  margin-bottom: 1em;
   padding: 2em 1em;
   top: 60px;
   bottom: 60px;
