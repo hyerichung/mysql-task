@@ -16,7 +16,7 @@ export default function useAudio() {
 
     intervalRef.current = setInterval(() => {
       if (audioRef.current.ended) {
-        dispatch(setIsPlaying());
+        dispatch(setIsPlaying(false));
       }
     }, [1000]);
   }, [dispatch]);
