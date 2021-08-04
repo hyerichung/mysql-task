@@ -17,7 +17,7 @@ const PlayControlButton = styled.div`
 
 function PlayerControlButton({ title, isPlaying, onControlButtonClick }) {
   return (
-    <PlayControlButton onClick={onControlButtonClick}>
+    <PlayControlButton onClickCapture={onControlButtonClick}>
       { title && <FontAwesomeIcon icon={isPlaying ? faPause : faPlay } /> }
     </PlayControlButton>
   );

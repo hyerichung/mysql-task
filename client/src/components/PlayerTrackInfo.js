@@ -21,9 +21,9 @@ const CurrentTrackTitleText = styled.div`
 `;
 
 const CurrentTrackArtistText = styled.div`
-   width: 95%;
-   font-size: 12px;
-   overflow: hidden;
+  width: 95%;
+  font-size: 12px;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
