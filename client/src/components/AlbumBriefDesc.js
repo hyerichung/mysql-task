@@ -38,7 +38,7 @@ function AlbumBriefDesc({ album }) {
           {trimTitle(album.title, 22)}
         </AlbumTitle>
       </AlbumTitleWrapper>
-      <AlbumArtist>{trimTitle(album.artist)}</AlbumArtist>
+      <AlbumArtist>{trimTitle(album.artist, 22)}</AlbumArtist>
     </AlbumBriefDescWrapper>
   );
 }
