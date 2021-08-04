@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setIsPlaying } from "../redux/slices/currentMusicSlice";
@@ -22,6 +22,13 @@ export default function useAudio() {
   }, [dispatch]);
 
   useEffect(() => {
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
       checkMusicPlayingWithInterval();
@@ -33,14 +40,7 @@ export default function useAudio() {
     }
   }, [isPlaying, checkMusicPlayingWithInterval]);
 
-  useEffect(() => {
-    return () => {
-      audioRef.current.pause();
-      clearInterval(intervalRef.current);
-    };
-  }, []);
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
