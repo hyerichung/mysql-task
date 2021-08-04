@@ -25,9 +25,9 @@ const AlbumTitle = styled.div`
 `;
 
 const AlbumArtist = styled.div`
+  padding-left: 0.5em;
   font-size: 13px;
   color: ${({ theme }) => theme.colors.grey};;
-  padding-left: 0.5em;
 `;
 
 function AlbumBriefDesc({ album }) {
@@ -38,7 +38,7 @@ function AlbumBriefDesc({ album }) {
           {trimTitle(album.title, 22)}
         </AlbumTitle>
       </AlbumTitleWrapper>
-      <AlbumArtist>{album.artist}</AlbumArtist>
+      <AlbumArtist>{trimTitle(album.artist)}</AlbumArtist>
     </AlbumBriefDescWrapper>
   );
 }

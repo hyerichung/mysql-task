@@ -9,12 +9,18 @@ const TrackTitleText = styled.div`
   width: 85%;
   padding: 0.1em 0.6em;
   font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: ${({ theme }) => theme.colors.white};
 `;
 
 const TrackArtistText = styled.div`
   padding: 0 1em;
   font-size: 0.7em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: ${({ theme }) => theme.colors.grey};
 `;
 
