@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { PLAYER_TRACK_INFO } from "../constants";
-import trimTitle from "../utils/trimTitle";
 
 const CurrentTrackInfo = styled.div`
   display: flex;
@@ -14,28 +13,29 @@ const CurrentTrackInfo = styled.div`
 `;
 
 const CurrentTrackTitleText = styled.div`
-  width: 100%;
+  width: 90%;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const CurrentTrackArtistText = styled.div`
-   width: 100%;
-   font-size: 12px;
+  width: 95%;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 function PlayerTrackInfo({ title, artist }) {
   return (
     <CurrentTrackInfo>
       <CurrentTrackTitleText>
-        {title.length
-          ? trimTitle(title, 26)
-          : PLAYER_TRACK_INFO.TITLE
-        }
+        {title.length ? title : PLAYER_TRACK_INFO.TITLE}
       </CurrentTrackTitleText>
       <CurrentTrackArtistText>
-        {artist
-          ? artist
-          : PLAYER_TRACK_INFO.COPYRIGHT
+        {artist.length ? artist : PLAYER_TRACK_INFO.COPYRIGHT
         }
       </CurrentTrackArtistText>
     </CurrentTrackInfo>
