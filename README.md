@@ -155,7 +155,7 @@ yarn dev
 
 ## ✨ TO-DO
 * 현재 MySQL에 데이터를 저장하는 방식은, s3에 수동으로 업로드 한 음원 파일, 앨범 커버 사진의 객체 URL를 이용해 앨범/트랙 목데이터 json을 만들고, MySQL과 노드가 연결될 시 해당 데이터를 함께 업로드 해줍니다(pm2로 서버 관리 중)
-  - 해당 방식은 데이터 수가 작았기 가능하였지만, 확장성을 고려하면 서버에서 aws-sdk를 이용해 데이터를 s3로 업로드 해서 객체 URL을 받아 Sequelize로 해당 객체 URL을 가진 모델을 생성해 MySQL에 집어넣어 사용하거나, Sequelize의 seeds, migration 기능을 이용하여 개선하고 싶습니다.
+  - 해당 방식은 데이터 수가 작았기에 가능하였지만, 확장성을 고려하면 서버에서 aws-sdk를 이용해 데이터를 s3로 업로드 해서 객체 URL을 받아 Sequelize로 해당 객체 URL을 가진 모델을 생성해 MySQL에 집어넣어 사용하거나, Sequelize의 seeds, migration 기능을 이용하여 개선하고 싶습니다.
 - s3를 cloudfront와 함께 배포
 - 배포 자동화 고려
 - redux-persist 이용하여 새로고침 시 페이지에서 음악 데이터 유실 방지
