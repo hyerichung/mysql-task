@@ -8,7 +8,7 @@ import PlayerTrackInfo from "./PlayerTrackInfo";
 const PlayerWrapper = styled.div`
   width: 100%;
   height: 60px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 1;
   background-color: ${({ theme }) => theme.colors.search};
@@ -22,6 +22,8 @@ const PlayerWrapper = styled.div`
 
 const PlayerContents = styled.div`
   display: flex;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 100%;
 `;

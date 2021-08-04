@@ -4,10 +4,11 @@ import styled from "styled-components";
 import Track from "../components/Track";
 
 const TrackListWrapper = styled.div`
-  width: 100vw;
+  width: 95vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1em;
 `;
 
 function TrackList({ artist, tracks, coverUrl, onTrackClick }) {
