@@ -1,8 +1,5 @@
 # mysql-task
 
-## ✨ 배포링크
-http://ec2-54-180-135-200.ap-northeast-2.compute.amazonaws.com
-
 <img width="500" alt="Screen Shot 2021-08-05 at 12 26 24 am" src="https://user-images.githubusercontent.com/64633218/128210576-fc62978b-4a07-48ac-9adc-f13dce7ee905.png">
 <img width="500" alt="Screen Shot 2021-08-05 at 12 26 17 am" src="https://user-images.githubusercontent.com/64633218/128210582-769addb3-94ef-46e6-b2e3-c51a46903c27.png">
 <img width="500" alt="Screen Shot 2021-08-05 at 12 26 34 am" src="https://user-images.githubusercontent.com/64633218/128210603-539f0fdc-0e3d-4188-84d2-822f152e69be.png">
